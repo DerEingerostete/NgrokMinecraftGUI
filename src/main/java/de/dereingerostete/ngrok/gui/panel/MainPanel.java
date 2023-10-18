@@ -170,7 +170,7 @@ public class MainPanel extends ActivePanel {
     public void updateComponentSize() {}
 
     private void openDetect() {
-        if (thread != null && !thread.hasStopped()) {
+        if (thread != null && thread.isRunning()) {
             showRunningWarning();
             return;
         }
@@ -192,7 +192,7 @@ public class MainPanel extends ActivePanel {
     }
 
     private void openDefault() {
-        if (thread != null && !thread.hasStopped()) {
+        if (thread != null && thread.isRunning()) {
             showRunningWarning();
             return;
         }
@@ -208,7 +208,7 @@ public class MainPanel extends ActivePanel {
     }
 
     public void openTunnel(@Nullable Integer port) {
-        if (thread != null && !thread.hasStopped()) {
+        if (thread != null && thread.isRunning()) {
             thread.close();
             return;
         }

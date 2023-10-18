@@ -98,8 +98,8 @@ public class NgrokProcessThread extends Thread {
         exiting = true;
     }
 
-    public boolean hasStopped() {
-        return stopped;
+    public boolean isRunning() {
+        return !stopped;
     }
 
 }
