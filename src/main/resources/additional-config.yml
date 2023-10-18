@@ -1,0 +1,28 @@
+# These are additional config values that are read only (never changed by the program itself) #
+# =========================================================================================== #
+
+# This is the region where the ngrok agent will connect to
+# (Region codes are found here: https://ngrok.com/docs/agent/config/#region)
+# Leave empty to automatically set the server region to the closest one
+region: ''
+
+# Command line arguments (only strings allowed)
+# Changing the existing values could lead to the programm to not working anymore!
+parameters:
+  log: 'stdout'
+  log-level: 'info'
+  log-format: 'json'
+
+# Ngrok executable
+executable: 'ngrok.exe'
+downloadPath: 'https://bin.equinox.io/c/bNyj1mQVY4c/ngrok-v3-stable-windows-amd64.zip'
+
+# Theme for GUI
+# WARNING: Only use a different jar file, if you know that the content of it is not malicious.
+#          The jar file will be executed and can lead to malicious code being run!
+theming:
+  themeType: 'JAR' # "JAR" to use a Jar file for the theme, "JSON" to use a theme.json file for theme
+  jarClass: 'com.formdev.flatlaf.FlatDarkLaf' # Enter the class name of the LookAndFeel class
+  jarFile: 'theme.jar' # The name of the jar file
+  jsonFile: 'theme.json' # Enter the name of the theme json file
+  hyperlinkColor: '#489fb5' # Hex code with Hashtag for hyperlinks
