@@ -15,7 +15,6 @@ import de.dereingerostete.ngrok.util.config.Configuration;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
 
-import javax.imageio.ImageIO;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.datatransfer.Clipboard;
@@ -24,7 +23,6 @@ import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.awt.event.MouseListener;
-import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
@@ -156,22 +154,6 @@ public class GUIUtils {
                 showWarning(panel, "Unexpected exception", "Failed to save configuration. Please try again later.");
             }
         };
-    }
-
-    @NotNull
-    public static ImageIcon loadIcon(@NotNull String name) throws IllegalStateException {
-        URL url = getResourceAsURL(name);
-        return new ImageIcon(url);
-    }
-
-    @NotNull
-    public static BufferedImage loadImage(@NotNull String name) throws IllegalStateException {
-        try {
-            URL url = getResourceAsURL(name);
-            return ImageIO.read(url);
-        } catch (IOException exception) {
-            throw new IllegalStateException(exception);
-        }
     }
 
     @NotNull

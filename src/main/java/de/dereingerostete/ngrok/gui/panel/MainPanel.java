@@ -302,8 +302,4 @@ public class MainPanel extends ActivePanel {
         }
     }
 
-    public void setPortField(@NotNull String text) {
-        this.portField.setText(text);
-    }
-
 }

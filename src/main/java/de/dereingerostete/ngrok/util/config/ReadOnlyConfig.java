@@ -9,7 +9,6 @@
 
 package de.dereingerostete.ngrok.util.config;
 
-import de.dereingerostete.ngrok.util.GUIUtils;
 import lombok.Data;
 import org.jetbrains.annotations.NotNull;
 import org.jetbrains.annotations.Nullable;
